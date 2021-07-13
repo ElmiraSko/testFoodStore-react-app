@@ -1,8 +1,8 @@
 import React, { useState, useEffect }from 'react';
 import Typography from '@material-ui/core/Typography';
 import {useParams} from 'react-router-dom';
-import {getFilteredCategories} from '../../api';
-import MealCard from './MealCard';
+import {getFilteredCategories} from '../../../api';
+import MealCard from './components/MealCard';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 
@@ -20,7 +20,7 @@ export default function MealsByCategory(props) {
 
     return(
         <Container maxWidth="lg">
-            <Typography variant="h6" style={{textAlign: 'center', margin: "1rem 0 2rem 0", color: 'grey'}}>
+            <Typography variant="h6" style={{textAlign: 'center', margin: "1rem 0 2rem 0", color: '#a67800'}}>
                 Блюда из категории: {catName}
             </Typography> 
             <Grid container spacing={3}>

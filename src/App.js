@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Home from './components/pages/Home'
+import Home from './components/pages/main/Home'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
-import MealsByCategory from './components/pages/MealsByCategory'
-import Check from './components/pages/Check'
+import MealsByCategory from './components/pages/meals/MealsByCategory'
+import Check from './components/pages/basket/Check'
 // import LocationCard from './components/pages/location/LocationCard'
 import {
   BrowserRouter as Router,
@@ -35,7 +35,6 @@ function removeMeal(id) {
   const element = mealArray.find(elem => elem.id === id)
   const helpArr = mealArray.filter(item => item.id !== id)
   setMealCount(prev => prev - element.count);
-  // console.log(helpArr)
   setMealArray(helpArr)
 }
   return (

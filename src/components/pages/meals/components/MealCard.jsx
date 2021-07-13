@@ -28,7 +28,7 @@ export default function MealCard(props) {
     return(
         <Card className={classes.root}>
             <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
+                <Typography className={classes.title} style={{color: '#FFB800'}} gutterBottom>
                     {strMeal}
                 </Typography>
             </CardContent>    
@@ -38,9 +38,17 @@ export default function MealCard(props) {
                 title={strMeal}
             />            
             <CardActions style={{display: 'flex', justifyContent: 'space-between'}}>
-                <Button size="small" onClick={() => buttonHandler({name: strMeal, id: idMeal, count: 1})}>
-                    Купить</Button>
-                    <Button size="small">Подробнее</Button>
+                <Button 
+                    size="small" 
+                    style={{color: '#7a45d6'}}
+                    onClick={() => buttonHandler({name: strMeal, id: idMeal, count: 1})}>
+                    Купить
+                </Button>
+                <Button 
+                    size="small"
+                    style={{color: '#7a45d6'}}>
+                        Подробнее
+                </Button>
             </CardActions>    
         </Card>                
     )

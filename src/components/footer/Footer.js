@@ -5,10 +5,11 @@ const useStyles = makeStyles(() => ({
     footer: {
         minHeight: '60px',
         padding: "5px 0",
-        // marginTop: '50px',
-        boxShadow: '0 0 3px 2px rgba(132, 140, 142, 0.5)',
+        marginTop: '50px',
+        background: 'rgba(122, 69, 214, 0.5)',
+        // boxShadow: '0 0 3px 2px rgba(122, 69, 214, 0.5)',
         textAlign: 'center',
-        color: '#848C8E',
+        color: '#ffffff',
         lineHeight: '2rem'
     },
 }));

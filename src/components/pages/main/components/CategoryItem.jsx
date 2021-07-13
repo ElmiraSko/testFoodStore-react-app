@@ -19,7 +19,7 @@ export default function CategoryItem(props) {
 
     return (
         <Paper className={classes.paper}>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h6" gutterBottom style={{color: '#FFB800'}}>
                 {strCategory}
             </Typography>                    
             <Link to={`/category/${strCategory}`}>

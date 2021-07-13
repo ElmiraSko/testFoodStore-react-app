@@ -10,6 +10,8 @@ const StyledBadge = withStyles((theme) => ({
     top: 13,
     border: `2px solid ${theme.palette.background.paper}`,
     padding: '0 4px',
+    background: '#b393eb',
+    color: '#ffffff',
   },
 }))(Badge);
 
@@ -17,7 +19,7 @@ export default function CustomizedBadges(props) {
     const {mealCount} = props
   return (
     <IconButton aria-label="cart">
-      <StyledBadge badgeContent={mealCount} color="secondary">
+      <StyledBadge badgeContent={mealCount}>
         <ShoppingCartIcon />
       </StyledBadge>
     </IconButton>
