@@ -1,5 +1,4 @@
-import React from 'react';
-import {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import { getAllCategories } from '../../../api';
 import Typography from '@material-ui/core/Typography';
 import ListPresentation from './components/ListPresentation';
@@ -23,11 +22,8 @@ export default function Home() {
         <>
             {!categories.length ? <Preloader /> : 
                 <div>
-                    <div>
-                        Выбрать страну
-                    </div>
                 <Typography variant="h5" style={{textAlign: 'center', margin: "1rem 0 2rem 0", color: '#a67800'}}>
-                    Категории блюд 
+                Categories of dishes
                 </Typography>
                 <ListPresentation requiredData = {categories} />
                 </div>

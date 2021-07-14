@@ -6,6 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 export default function MealCard(props) {
-    const {strMeal, strMealThumb, idMeal, buttonHandler} = props
+    const {strMeal, strMealThumb, idMeal, buyButtonHandler, recipeButtonHandler} = props
     const classes = useStyles();
 
     return(
@@ -41,14 +42,17 @@ export default function MealCard(props) {
                 <Button 
                     size="small" 
                     style={{color: '#7a45d6'}}
-                    onClick={() => buttonHandler({name: strMeal, id: idMeal, count: 1})}>
-                    Купить
+                    onClick={() => buyButtonHandler({name: strMeal, id: idMeal, count: 1})}>
+                        Buy
                 </Button>
-                <Button 
-                    size="small"
+                <Link to={`/meal-recipe/${idMeal}`}
+                    style={{textDecoration: 'none', }}>
+                    <Button 
+                    size="small" 
                     style={{color: '#7a45d6'}}>
-                        Подробнее
-                </Button>
+                        Cooking recipe
+                    </Button>                        
+                </Link>
             </CardActions>    
         </Card>                
     )

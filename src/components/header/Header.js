@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     color: '#fff',
     display: 'flex',
+    marginRight: '15px'
   },
   offset: theme.mixins.toolbar,
 }));
@@ -39,14 +40,29 @@ export default function Header(props) {
     <div className={classes.root}>
       <AppBar position="fixed" style={{background: '#a67800',}}>
         <Toolbar style={appBarStyle}>
-          <Link to={'/'} className={classes.headerLink} >
+          <div style={{display: 'flex',}}>
+            <Link to={'/'} className={classes.headerLink} >
+              <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                <i>TestShop</i>
+              </IconButton>
+              <Typography variant="h6" className={classes.title}>
+                All categories
+              </Typography>
+            </Link>
+            <Link to={'/countries'} className={classes.headerLink} >
+              <Typography variant="h6" className={classes.title}>
+                Countries
+              </Typography>
+            </Link>
+          </div>
+          {/* <Link to={'/'} className={classes.headerLink} >
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
               <i>TestShop</i>
             </IconButton>
             <Typography variant="h6" className={classes.title}>
               Все категории
             </Typography>
-          </Link>
+          </Link> */}
           <Link to={'/check'} className={classes.headerLink} >
           <CustomizedBadges mealCount={mealCount}/>
           </Link>         

@@ -30,4 +30,4 @@ const getAllArea = async () => {
     return await respons.json();
 };
 
-export { getMealById, getAllCategories, getFilteredCategories }
+export { getMealById, getAllCategories, getFilteredCategories, getAllArea, getMealsByArea }
