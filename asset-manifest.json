@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/testFoodStore-react-app/static/css/main.ee59a014.chunk.css",
-    "main.js": "/testFoodStore-react-app/static/js/main.89a41fc1.chunk.js",
-    "main.js.map": "/testFoodStore-react-app/static/js/main.89a41fc1.chunk.js.map",
+    "main.js": "/testFoodStore-react-app/static/js/main.98486ccb.chunk.js",
+    "main.js.map": "/testFoodStore-react-app/static/js/main.98486ccb.chunk.js.map",
     "runtime-main.js": "/testFoodStore-react-app/static/js/runtime-main.63f320b7.js",
     "runtime-main.js.map": "/testFoodStore-react-app/static/js/runtime-main.63f320b7.js.map",
-    "static/js/2.2924664d.chunk.js": "/testFoodStore-react-app/static/js/2.2924664d.chunk.js",
-    "static/js/2.2924664d.chunk.js.map": "/testFoodStore-react-app/static/js/2.2924664d.chunk.js.map",
+    "static/js/2.bcb85dc6.chunk.js": "/testFoodStore-react-app/static/js/2.bcb85dc6.chunk.js",
+    "static/js/2.bcb85dc6.chunk.js.map": "/testFoodStore-react-app/static/js/2.bcb85dc6.chunk.js.map",
     "index.html": "/testFoodStore-react-app/index.html",
     "static/css/main.ee59a014.chunk.css.map": "/testFoodStore-react-app/static/css/main.ee59a014.chunk.css.map",
-    "static/js/2.2924664d.chunk.js.LICENSE.txt": "/testFoodStore-react-app/static/js/2.2924664d.chunk.js.LICENSE.txt"
+    "static/js/2.bcb85dc6.chunk.js.LICENSE.txt": "/testFoodStore-react-app/static/js/2.bcb85dc6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.63f320b7.js",
-    "static/js/2.2924664d.chunk.js",
+    "static/js/2.bcb85dc6.chunk.js",
     "static/css/main.ee59a014.chunk.css",
-    "static/js/main.89a41fc1.chunk.js"
+    "static/js/main.98486ccb.chunk.js"
   ]
 }
