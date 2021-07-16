@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import Typography from '@material-ui/core/Typography';
 import { useParams } from 'react-router-dom';
 import Container from '@material-ui/core/Container';
-import { getMealById } from '../../../api'
+import BackspaceIcon from '@material-ui/icons/Backspace';
+import { getMealById } from '../../../api';
+import {useHistory } from 'react-router';
 
-export default function MealRecipe(props) {
+export default function MealRecipe() {
 
     const {mealId} = useParams()
     const [meal, setMeal] = useState([])
 
+    const history = useHistory();
+    console.log(history);    
+    
     useEffect( () => {
         getMealById(mealId).then(data => {
             console.log(data.meals)
@@ -17,17 +21,19 @@ export default function MealRecipe(props) {
     }, [])  
 
     return(
-        <Container maxWidth="lg">
-              
+        <Container maxWidth="lg"  style={{color: '#795548'}}>              
             {meal.map(el => 
-            <>
-                <div key={el.idMeal} style={{display: 'flex'}}>
+            <div key={el.idMeal}>
+                <div style={{display: 'flex'}}>
                     <img src={el.strMealThumb} alt={el.strMeal} 
                     style={{width: '280px', height: 'auto', margin: '20px', borderRadius: '5px'}} />
-                    <div  style={{color: '#795548'}}>
-                        <h3>
-                        {el.strMeal}
-                        </h3>
+                    <div>
+                        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                        <h3> {el.strMeal} </h3>
+                            <div onClick={() => history.goBack()}>
+                            <BackspaceIcon style={{margin: '18.7px 0', cursor: 'pointer'}}/>
+                            </div>
+                        </div>                        
                         <p>
                         {el.strInstructions}
                         </p>                        
@@ -64,7 +70,7 @@ export default function MealRecipe(props) {
                         {el.strIngredient20 ? <li>{el.strIngredient20} {el.strMeasure20}</li> : null }
                     </ul>
                 </div>
-            </>
+            </div>
             )}           
         </Container>
     )

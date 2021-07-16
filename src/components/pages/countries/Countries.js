@@ -2,15 +2,14 @@ import React, {useState, useEffect} from 'react';
 import { getAllArea } from '../../../api';
 import Preloader from '../Preloader';
 import { Link } from 'react-router-dom';
-import { createTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import { green, orange, deepPurple } from '@material-ui/core/colors';
+import { withStyles } from '@material-ui/core/styles';
+import { orange, deepPurple } from '@material-ui/core/colors';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 
-const ColorButton = withStyles((theme) => ({
+const ColorButton = withStyles(() => ({
     root: {
-    //   color: theme.palette.getContrastText(deepPurple[200]),
         color: '#ffffff',
         backgroundColor: deepPurple[200],
         width: '200px',
